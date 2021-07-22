@@ -2,6 +2,8 @@ package me.heartalborada.genshin;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -21,9 +23,5 @@ public class genshin {
     private static final Logger LOGGER = LogManager.getLogger();
     public genshin(){
         Registry.register();
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-    }
-    private void setup(final FMLCommonSetupEvent event){
-        LOGGER.info("az");
     }
 }
