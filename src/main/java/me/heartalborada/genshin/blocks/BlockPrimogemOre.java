@@ -12,15 +12,15 @@ import net.minecraft.world.server.ServerWorld;
 
 import java.util.*;
 
-public class BlockPrimoGemOre extends Block {
-    public BlockPrimoGemOre(Properties properties) {
+public class BlockPrimogemOre extends Block {
+    public BlockPrimogemOre(Properties properties) {
         super(properties);
     }
 
     @Override
     public List<ItemStack> getDrops(BlockState p_220076_1_, LootContext.Builder p_220076_2_) {
         List<ItemStack> drops = NonNullList.create();
-        drops.add(new ItemStack(GenshinItems.primoGem.get()));
+        drops.add(new ItemStack(GenshinItems.primogem.get()));
         return drops;
     }
 

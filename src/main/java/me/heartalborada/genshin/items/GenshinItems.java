@@ -10,10 +10,10 @@ import static me.heartalborada.genshin.Genshin.BLOCK_TAB;
 import static me.heartalborada.genshin.Genshin.ITEM_TAB;
 
 public class GenshinItems {
-    public static RegistryObject<Item> primoGem;
-    public static RegistryObject<Item> primoGemOre;
+    public static RegistryObject<Item> primogem;
+    public static RegistryObject<Item> primogemOre;
     public static void register(){
-        primoGem= GenshinRegistry.ITEMS.register("primogem",()->new Item(new Item.Properties().tab(ITEM_TAB).stacksTo(64)));
-        primoGemOre = GenshinRegistry.ITEMS.register("primogem_ore", () -> new BlockItem(GenshinBlocks.primoGemOre.get(), new Item.Properties().tab(BLOCK_TAB)));
+        primogem= GenshinRegistry.ITEMS.register("primogem",()->new Item(new Item.Properties().tab(ITEM_TAB).stacksTo(64)));
+        primogemOre = GenshinRegistry.ITEMS.register("primogem_ore", () -> new BlockItem(GenshinBlocks.primogemOre.get(), new Item.Properties().tab(BLOCK_TAB).stacksTo(64)));
     }
 }

@@ -10,9 +10,9 @@ import net.minecraftforge.fml.RegistryObject;
 import static net.minecraftforge.common.ToolType.PICKAXE;
 
 public class GenshinBlocks {
-    public static RegistryObject<Block> primoGemOre;
+    public static RegistryObject<Block> primogemOre;
     
     public static void register(){
-        primoGemOre = GenshinRegistry.BLOCKS.register("primogem_ore",()-> new BlockPrimoGemOre(AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(10).harvestLevel(3).harvestTool(PICKAXE)));
+        primogemOre = GenshinRegistry.BLOCKS.register("primogem_ore",()-> new BlockPrimogemOre(AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(10).harvestLevel(3).harvestTool(PICKAXE)));
     }
 }
