@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+      "item": "genshin:primogem_ore"
+    },
+    "result": "genshin:primogem",
+    "experience": 3,
+    "cookingtime": 200
+  }

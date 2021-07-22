@@ -5,6 +5,9 @@ import me.heartalborada.genshin.handler.GenshinRegistry;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.server.command.TextComponentHelper;
+
+import java.awt.*;
 
 import static me.heartalborada.genshin.Genshin.BLOCK_TAB;
 import static me.heartalborada.genshin.Genshin.ITEM_TAB;

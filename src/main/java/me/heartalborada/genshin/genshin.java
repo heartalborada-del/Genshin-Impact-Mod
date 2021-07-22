@@ -1,12 +1,18 @@
 package me.heartalborada.genshin;
 
+import me.heartalborada.genshin.generate.generatePrimogemOre;
 import me.heartalborada.genshin.handler.GenshinRegistry;
 import me.heartalborada.genshin.items.GenshinItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import me.heartalborada.genshin.generate.generateOre;
 
 @Mod("genshin")
 public class Genshin {
@@ -16,7 +22,7 @@ public class Genshin {
     public static final ItemGroup ITEM_TAB = new ItemGroup("genshin_items") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(GenshinItems.primogemOre.get());
+            return new ItemStack(GenshinItems.primogem.get());
         }
     };
 
@@ -30,5 +36,7 @@ public class Genshin {
     private static final Logger LOGGER = LogManager.getLogger();
     public Genshin(){
         GenshinRegistry.register();
+        final IEventBus eventBus= FMLJavaModLoadingContext.get().getModEventBus();
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, generatePrimogemOre::generatePrimogemOre);
     }
 }
