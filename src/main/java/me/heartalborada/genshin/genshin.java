@@ -16,14 +16,14 @@ public class Genshin {
     public static final ItemGroup ITEM_TAB = new ItemGroup("genshin_items") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(GenshinItems.primoGem.get());
+            return new ItemStack(GenshinItems.primogemOre.get());
         }
     };
 
     public static final ItemGroup BLOCK_TAB = new ItemGroup("genshin_blocks") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(GenshinItems.primoGemOre.get());
+            return new ItemStack(GenshinItems.primogemOre.get());
         }
     };
 
