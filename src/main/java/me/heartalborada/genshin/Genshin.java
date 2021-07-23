@@ -1,6 +1,6 @@
 package me.heartalborada.genshin;
 
-import me.heartalborada.genshin.generate.generatePrimogemOre;
+import me.heartalborada.genshin.world.gen.PrimogemOre;
 import me.heartalborada.genshin.handler.GenshinRegistry;
 import me.heartalborada.genshin.items.GenshinItems;
 import net.minecraft.item.ItemGroup;
@@ -12,7 +12,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import me.heartalborada.genshin.generate.generateOre;
 
 @Mod("genshin")
 public class Genshin {
@@ -37,6 +36,6 @@ public class Genshin {
     public Genshin(){
         GenshinRegistry.register();
         final IEventBus eventBus= FMLJavaModLoadingContext.get().getModEventBus();
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, generatePrimogemOre::generatePrimogemOre);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, PrimogemOre::generatePrimogemOre);
     }
 }

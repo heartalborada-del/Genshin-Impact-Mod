@@ -12,8 +12,10 @@ import static me.heartalborada.genshin.Genshin.ITEM_TAB;
 public class GenshinItems {
     public static RegistryObject<Item> primogem;
     public static RegistryObject<Item> primogemOre;
+    public static RegistryObject<Item> AnemoculusLog;
     public static void register(){
         primogem= GenshinRegistry.ITEMS.register("primogem",()->new Item(new Item.Properties().tab(ITEM_TAB).stacksTo(64)));
         primogemOre = GenshinRegistry.ITEMS.register("primogem_ore", () -> new BlockItem(GenshinBlocks.primogemOre.get(), new Item.Properties().tab(BLOCK_TAB).stacksTo(64)));
+        AnemoculusLog = GenshinRegistry.ITEMS.register("anemoculus_log", () -> new BlockItem(GenshinBlocks.AnemoculusLog.get(), new Item.Properties().tab(BLOCK_TAB).stacksTo(64)));
     }
 }

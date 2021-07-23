@@ -1,14 +1,13 @@
-package me.heartalborada.genshin.generate;
+package me.heartalborada.genshin.world.gen;
 
-import me.heartalborada.genshin.blocks.GenshinBlocks;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import static me.heartalborada.genshin.blocks.GenshinBlocks.primogemOre;
 
-public class generatePrimogemOre {
+public class PrimogemOre {
     public static void generatePrimogemOre(final BiomeLoadingEvent e){
-        new generateOre(e.getGeneration(),
+        new Ore(e.getGeneration(),
                 OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                 primogemOre.get().defaultBlockState(),
                 8,
