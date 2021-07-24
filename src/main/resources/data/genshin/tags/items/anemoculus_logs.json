@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "genshin:anemoculus_log",
+    "genshin:anemoculus_wood",
+    "genshin:stripped_anemoculus_wood",
+    "genshin:stripped_anemoculus_log"
+  ]
+}

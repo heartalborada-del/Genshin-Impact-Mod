@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "planks",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "genshin:anemoculus_log"
+    }
+  },
+  "result": {
+    "item": "genshin:anemoculus_wood",
+    "count": 3
+  }
+}
