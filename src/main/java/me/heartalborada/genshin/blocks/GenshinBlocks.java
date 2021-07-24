@@ -4,6 +4,7 @@ import me.heartalborada.genshin.handler.GenshinRegistry;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.RegistryObject;
@@ -66,7 +67,7 @@ public class GenshinBlocks {
                 .harvestTool(AXE)
                 .sound(SoundType.WOOD))
         );
-        AnemoculusLeaves = GenshinRegistry.BLOCKS.register("anemoculus_leaves",()-> new BlockAnemoculusPlanks(AbstractBlock.Properties
+        AnemoculusLeaves = GenshinRegistry.BLOCKS.register("anemoculus_leaves",()-> new LeavesBlock(AbstractBlock.Properties
                 .of(Material.LEAVES)
                 .requiresCorrectToolForDrops()
                 .strength(0.2F)
