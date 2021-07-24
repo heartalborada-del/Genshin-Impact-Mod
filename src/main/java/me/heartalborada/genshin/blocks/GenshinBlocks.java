@@ -16,6 +16,7 @@ import static net.minecraftforge.common.ToolType.*;
 public class GenshinBlocks {
     public static RegistryObject<Block> primogemOre;
     public static RegistryObject<Block> AnemoculusLog;
+    public static RegistryObject<Block> AnemoculusPlanks;
     public static void register(){
         primogemOre = GenshinRegistry.BLOCKS.register("primogem_ore",()-> new BlockPrimogemOre(AbstractBlock.Properties.of(Material.STONE)
                 .requiresCorrectToolForDrops()
@@ -26,6 +27,13 @@ public class GenshinBlocks {
         AnemoculusLog = GenshinRegistry.BLOCKS.register("anemoculus_log",()-> new BlockAnemoculusLog(AbstractBlock.Properties.of(Material.WOOD)
                 .requiresCorrectToolForDrops()
                 .strength(2)
+                .harvestLevel(0)
+                .harvestTool(AXE)
+                .sound(SoundType.WOOD))
+        );
+        AnemoculusPlanks = GenshinRegistry.BLOCKS.register("anemoculus_planks",()-> new BlockAnemoculusPlanks(AbstractBlock.Properties.of(Material.WOOD)
+                .requiresCorrectToolForDrops()
+                .strength(2.0F)
                 .harvestLevel(0)
                 .harvestTool(AXE)
                 .sound(SoundType.WOOD))
