@@ -4,18 +4,14 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.EnumProperty;
-import net.minecraft.state.Property;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Rotation;
 
-import java.util.Collection;
-import java.util.Optional;
-
-public class BlockAnemoculusLog extends Block{
+public class BlockAnemoculusLogs extends Block{
     public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
-    public BlockAnemoculusLog(Properties properties) {
+    public BlockAnemoculusLogs(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y));
     }

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "genshin:block/stripped_anemoculus_log_top",
+    "side": "genshin:block/stripped_anemoculus_log"
+  }
+}
