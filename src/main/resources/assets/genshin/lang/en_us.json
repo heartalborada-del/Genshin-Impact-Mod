@@ -2,5 +2,11 @@
   "itemGroup.genshin_items": "Genshin Impact Items",
   "itemGroup.genshin_blocks": "Genshin Impact Blocks",
   "item.genshin.primogem": "Primogem",
-  "block.genshin.primogem_ore": "Primogem Ore"
+  "block.genshin.primogem_ore": "Primogem Ore",
+  "block.genshin.anemoculus_log": "Anemoculus Log",
+  "block.genshin.anemoculus_planks": "Anemoculus Plank",
+  "block.genshin.anemoculus_wood": "Anemoculus Wood",
+  "block.genshin.stripped_anemoculus_log": "Stripped Anemoculus Log",
+  "block.genshin.stripped_anemoculus_wood": "Stripped Anemoculus Wood",
+  "block.genshin.anemoculus_leaves": "Anemoculus Leaves"
 }

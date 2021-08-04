@@ -1,11 +1,12 @@
 package me.heartalborada.genshin.handler;
 
+import me.heartalborada.genshin.blocks.BlockColors;
 import me.heartalborada.genshin.blocks.GenshinBlocks;
 import me.heartalborada.genshin.items.GenshinItems;
+import me.heartalborada.genshin.items.ItemColors;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -16,6 +17,9 @@ public class GenshinRegistry {
     {
         ITEMS.register(eventBus);
         BLOCKS.register(eventBus);
+
+        eventBus.addListener(BlockColors::registerBlockColors);
+        eventBus.addListener(ItemColors::registerItemColors);
 
         GenshinItems.register();
         GenshinBlocks.register();

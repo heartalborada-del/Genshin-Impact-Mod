@@ -4,6 +4,7 @@ import me.heartalborada.genshin.handler.GenshinRegistry;
 import net.minecraft.block.*;
 
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.fml.RegistryObject;
 
 import static net.minecraftforge.common.ToolType.*;
@@ -72,7 +73,8 @@ public class GenshinBlocks {
                 .isValidSpawn(BlockAnemoculusLeave::ocelotOrParrot)
                 .isSuffocating(BlockAnemoculusLeave::never)
                 .isViewBlocking(BlockAnemoculusLeave::never)
-                .noOcclusion())
+                .noOcclusion()
+                .randomTicks())
         );
     }
 }
