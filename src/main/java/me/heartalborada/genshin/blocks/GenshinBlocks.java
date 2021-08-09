@@ -1,11 +1,10 @@
 package me.heartalborada.genshin.blocks;
 
 import me.heartalborada.genshin.handler.GenshinRegistry;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
+import net.minecraft.block.*;
 
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.fml.RegistryObject;
 
 import static net.minecraftforge.common.ToolType.*;
@@ -66,16 +65,16 @@ public class GenshinBlocks {
                 .harvestTool(AXE)
                 .sound(SoundType.WOOD))
         );
-        AnemoculusLeaves = GenshinRegistry.BLOCKS.register("anemoculus_leaves",()-> new BlockAnemoculusPlanks(AbstractBlock.Properties
+        AnemoculusLeaves = GenshinRegistry.BLOCKS.register("anemoculus_leaves",()-> new BlockAnemoculusLeave(AbstractBlock.Properties
                 .of(Material.LEAVES)
                 .requiresCorrectToolForDrops()
                 .strength(0.2F)
-                .harvestLevel(0)
-                .harvestTool(AXE)
                 .sound(SoundType.GRASS)
                 .isValidSpawn(BlockAnemoculusLeave::ocelotOrParrot)
                 .isSuffocating(BlockAnemoculusLeave::never)
-                .isViewBlocking(BlockAnemoculusLeave::never))
+                .isViewBlocking(BlockAnemoculusLeave::never)
+                .noOcclusion()
+                .randomTicks())
         );
     }
 }

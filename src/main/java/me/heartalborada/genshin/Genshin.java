@@ -13,10 +13,13 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+
 @Mod("genshin")
 public class Genshin {
     public static final String MOD_ID = "genshin";
     public static final String MOD_NAME = "Genshin";
+
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public static final ItemGroup ITEM_TAB = new ItemGroup("genshin_items") {
         @Override
@@ -32,10 +35,9 @@ public class Genshin {
         }
     };
 
-    private static final Logger LOGGER = LogManager.getLogger();
     public Genshin(){
-        GenshinRegistry.register();
-        final IEventBus eventBus= FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus eventBus= FMLJavaModLoadingContext.get().getModEventBus();
+        GenshinRegistry.register(eventBus);
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, PrimogemOre::generatePrimogemOre);
     }
 }
