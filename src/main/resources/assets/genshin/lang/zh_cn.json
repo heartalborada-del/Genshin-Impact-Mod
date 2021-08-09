@@ -1,0 +1,12 @@
+{
+  "itemGroup.genshin_items": "原神物品",
+  "itemGroup.genshin_blocks": "原神方块",
+  "item.genshin.primogem": "原石",
+  "block.genshin.primogem_ore": "原石矿",
+  "block.genshin.anemoculus_log": "风神曈原木",
+  "block.genshin.anemoculus_planks": "风神曈木板",
+  "block.genshin.anemoculus_wood": "风神曈木头",
+  "block.genshin.stripped_anemoculus_log": "去皮风神曈原木",
+  "block.genshin.stripped_anemoculus_wood": "去皮风神曈木头",
+  "block.genshin.anemoculus_leaves": "风神曈树叶"
+}
